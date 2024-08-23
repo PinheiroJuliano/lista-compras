@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root{
+    --font-family: 'Inter', sans-serif;
+    --bg-color: #4b7bb6;
+    --primary-color: #fffff3;
+    --variable-color: #71a5e4;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--font-family);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 80vh;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 1em;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.logo-lista {
+    height: 5em;
+    width: 5em;
+    margin-bottom: 1em;
+}
+
+.item-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ddd;
+    width: auto;
+    gap: 5em;
+}
+
+.item-conteudo {
+    display: flex;
+    align-items: center;
+}
+
+.item-conteudo p {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+.timestamp{
+    font-size: 0.5em
+}
+
+.item-acoes {
+    display: flex;
+    align-items: center;
+}
+
+.item-acoes img {
+    margin-left: 0.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
