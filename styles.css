@@ -2,9 +2,9 @@
 
 :root{
     --font-family: 'Inter', sans-serif;
-    --bg-color: #4b7bb6;
-    --primary-color: #fffff3;
-    --variable-color: #71a5e4;
+    --bg-color: #963535;
+    --primary-color: #c54343;
+    --variable-color: #fff4f4;
 }
 
 
@@ -16,6 +16,7 @@ html, body {
     justify-content: center;
     height: 100vh;
     font-family: var(--font-family);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -29,6 +30,7 @@ html, body {
     padding: 1em;
     align-items: center;
     overflow-y: auto;
+    background-color: var(--variable-color);
 }
 
 .logo-lista {
@@ -37,11 +39,18 @@ html, body {
     margin-bottom: 1em;
 }
 
+.btn-adicionar{
+    color: var(--variable-color);
+    background-color: var(--primary-color);
+    border: none;
+    height: 1.8em;
+    border-radius: 2px;
+}
+
 .item-lista {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 0;
     border-bottom: 1px solid #ddd;
     width: auto;
     gap: 5em;
@@ -56,6 +65,7 @@ html, body {
     margin-left: 0.5em;
     font-size: 0.8em;
 }
+
 
 .timestamp{
     font-size: 0.5em
