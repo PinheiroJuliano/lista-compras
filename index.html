@@ -11,10 +11,10 @@
     <div class="container">
         <img src="./img/logo.png" alt="Logo da lista" class="logo-lista">
         <form>
-            <input type="text" class="entrada-item">
+            <select name="lista-produtos" id="dropdown-produtos" class="entrada-item"></select>
             <button id="btn-adicionar-item" class="btn-adicionar">Adicionar</button>
         </form>
-        <ul class="listaDeItens">
+        <ul class="listaDeItens" id="lista-selecionados">
             <li class="item-lista">
                 <div class="item-conteudo">
                     <img src="./img/checkbox_unchecked.svg" alt="Checkbox">
@@ -30,4 +30,5 @@
         </ul>
     </div>
 </body>
+<script src="scripts/script.js"></script>
 </html>

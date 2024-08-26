@@ -4,6 +4,7 @@
     --font-family: 'Inter', sans-serif;
     --bg-color: #963535;
     --primary-color: #c54343;
+    --secondary-color: #7e2e2e;
     --variable-color: #fff4f4;
 }
 
@@ -39,12 +40,23 @@ html, body {
     margin-bottom: 1em;
 }
 
+.entrada-item{
+    border: 1px var(--primary-color) solid;
+    border-radius: 2px;
+    min-height: 1.5em;
+    font-size: 0.8em;
+}
+
 .btn-adicionar{
     color: var(--variable-color);
     background-color: var(--primary-color);
     border: none;
     height: 1.8em;
     border-radius: 2px;
+}
+
+.btn-adicionar:hover{
+    background-color: var(--secondary-color);
 }
 
 .item-lista {
