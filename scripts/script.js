@@ -1,44 +1,16 @@
-// Função para converter para Propper Case
-function toProperCase(str) {
-  return str
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
+import toProperCase from "./toProperCase.js";
+import { sortByDescription } from "./sortByDescription.js";
 
-// Função para ordenar por descrição em ordem alfabética
-function sortByDescription(items) {
-  return items.slice().sort((a, b) => {
-    const descA = toProperCase(a.itemDescription);
-    const descB = toProperCase(b.itemDescription);
-    return descA.localeCompare(descB);
-  });
-}
-
-// Definição da função
+// Função para carregar dados do JSON
 async function loadData() {
   try {
-    const response = await fetch('/public/produtos.json'); // Caminho para o JSON
+    const response = await fetch('public/produtos.json');
     if (!response.ok) {
       throw new Error('Erro ao carregar o arquivo JSON');
     }
     const jsonData = await response.json();
 
-    console.log(jsonData);
-
-    const itemDescriptions = jsonData.map(item => toProperCase(item.itemDescription));
-
-    console.log(itemDescriptions);
-
-    const itemDescriptionsObj = jsonData.reduce((acc, item, index) => {
-      acc[`item${index + 1}`] = toProperCase(item.itemDescription);
-      return acc;
-    }, {});
-
-    console.log(itemDescriptionsObj);
-
-    return jsonData; // Retorna os dados para uso posterior
+    return jsonData;
   } catch (error) {
     console.error('Erro ao carregar o arquivo JSON:', error);
     return [];
