@@ -15,7 +15,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     font-family: var(--font-family);
     background-color: var(--bg-color);
 }
@@ -25,6 +25,7 @@ html, body {
     flex-direction: column;
     box-sizing: border-box;
     height: 80vh;
+    min-width: 22.71em;
     width: 100%;
     border: 1px solid grey;
     border-radius: 10px;
@@ -40,11 +41,34 @@ html, body {
     margin-bottom: 1em;
 }
 
-.entrada-item{
-    border: 1px var(--primary-color) solid;
-    border-radius: 2px;
-    min-height: 1.5em;
-    font-size: 0.8em;
+form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.label{
+    font-size: 0.5em;
+    color: var(--secondary-color);
+}
+
+.input-quantidade {
+    font-size: 0.6em;
+    width: 100%;
+    padding: 0.2em;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color); 
+    border-radius: 3px; 
+    color: var(--primary-color); 
+    background-color: var(--variable-color);
+    text-align: right;
+}
+
+.input-quantidade:focus {
+    outline: none; 
+    border-color: var(--secondary-color); 
+    box-shadow: 0 0 2px var(--secondary-color); 
 }
 
 .btn-adicionar{
@@ -53,10 +77,39 @@ html, body {
     border: none;
     height: 1.8em;
     border-radius: 2px;
+    margin-top: 0.3em;
 }
+
+.entrada-item{
+    border: 1px var(--primary-color) solid;
+    border-radius: 2px;
+    min-height: 1.5em;
+    font-size: 0.6em;
+    width: 100%;
+}
+
+.entrada-item:focus {
+    outline: none; 
+    border-color: var(--secondary-color); 
+    box-shadow: 0 0 2px var(--secondary-color); 
+}
+
+.item-descricao{
+    font-size: 0.7em;
+}
+
+.quantidade-item{
+    justify-content: right;
+    font-size: 0.7em;
+}
+
 
 .btn-adicionar:hover{
     background-color: var(--secondary-color);
+}
+
+.listaDeItens{
+    width: 100%;
 }
 
 .item-lista {

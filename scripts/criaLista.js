@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('btn-adicionar-item');
     const ul = document.getElementById('lista-selecionados');
 
+
     // Adiciona um novo item à lista ao clicar no botão "Adicionar"
     button.addEventListener('click', (event) => {
         event.preventDefault(); // Previne o comportamento padrão do botão de enviar o formulário
-
+        const quantidade = document.getElementById('quantidade').value;
         const selectedOption = select.options[select.selectedIndex];
         if (selectedOption) {
             // Cria um novo item de lista
@@ -17,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `
                 <div class="item-conteudo">
                     <img src="./img/checkbox_unchecked.svg" alt="Checkbox" class="checkbox">
-                    <span>${selectedOption.text}</span> <!-- Adiciona o texto do item selecionado -->
-                </div>
+                    <span class="item-descricao">${selectedOption.text}</span> <!-- Adiciona o texto do item selecionado -->
+                    </div>
                 <div class="item-acoes">
-                    <img src="./img/edit.svg" alt="btn-editar" class="btn-edit">
+                    <p class="quantidade-item">${quantidade}</p>
                     <img src="./img/delete.svg" alt="btn-delete" class="btn-delete">
                 </div>
             `;
